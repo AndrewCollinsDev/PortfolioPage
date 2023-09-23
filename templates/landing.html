@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+     .full-cover-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+       
+       
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="">
+    
+    <div id="MobileTabletSection" class="lg:hidden w-screen h-screen absolute z-10">
+        <div id="About_Me_Mobile" class="relative hidden mx-auto mt-32 cursor-pointer rounded-md w-5/6 h-24 bg-white text-4xl text-sky-950 mb-4 flex justify-center items-center">
+            <h1>About Me</h1>
+        </div>
+        <div id="About_Me_content_Mobile" class="relative w-full rounded-md hidden content">
+            <div id="content-content-mobile" class="h-full w-full rounded-md flex flex-col items-center text-white">
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Hi there!</p>
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">My name is Andrew Collins, a fresh Computer Science MSc grad and an aspiring developer. I really enjoy being able to write abstract lines of code and turn them into tangible, user-friendly solutions.  My journey has taken me through a plethora of different jobs, and right now, I’m working as a Learning Support Assistant at a local school. <br>
+                    I have a strong work ethic, juggling full-time work with both the final year of my undergrad and my master's. Now, I'm looking to find my first role in the tech sector. I’ve worked with a variety of technologies including HTML, CSS, JavaScript, Python, SQL and PHP and I’m excited to get started learning how to create things professionally.
+                    </p>
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Feel free to look through my projects on my portfolio to see what I'm up to!</p>
+    
+            </div>
+        </div>
+    
+        <div id="CV_Mobile" class="relative hidden mx-auto cursor-pointer rounded-md w-5/6 h-24 bg-white text-4xl text-sky-950 mb-4 flex justify-center items-center">
+            <h1>CV</h1>
+        </div>
+        <div id="CV_content_Mobile" class="relative w-full rounded-md hidden content mb-4">
+            <div id="content-content-mobile" class="h-full w-full rounded-md flex flex-col items-center text-white">
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Please download my CV by clicking the button below!</p>
+                <a href="{{ url_for('static', filename='Andrew_Collins_CV.pdf') }}" download>
+
+                    
+                <div class="text-9xl bg-sky-950 p-10 rounded-full border-2 opacity-90 mt-10 hover:bg-white hover:text-sky-950 cursor-pointer">
+                    <i class="fas fa-download animate-bounce"></i>
+            </div></a>
+    
+            </div>
+    
+        </div>
+    
+        <div id="Portfolio_Mobile" class="relative hidden mx-auto cursor-pointer rounded-md w-5/6 h-24 bg-white text-4xl text-sky-950 mb-4 flex justify-center items-center">
+            <h1>Portfolio</h1>
+        </div>
+        <div id="Portfolio_content_Mobile" class="relative w-full rounded-md hidden content">
+            <div id="content-content" class="h-full w-full rounded-md flex flex-col items-center text-white">
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">I hope to keep adding to these as time goes on.</p>
+                <p class="cursor-pointer hover:bg-white hover:text-sky-950 m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Allergen Recipe Scraper - Tech Stack : HTML/CSS/JS JQuery Python Flask.</p>
+                <p class="cursor-pointer hover:bg-white hover:text-sky-950 m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Simple Blog System - Tech Stack: HTML/CSS/JS JQuery PHP - Coming Soon!</p>
+                <p class="cursor-pointer hover:bg-white hover:text-sky-950 m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Book Store Inventory - Tech Stack HTML/CSS/JS Java Spark - Coming Soon!</p>
+                <p class="cursor-pointer hover:bg-white hover:text-sky-950 m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Weather Dashboard - Tech Stack : HTML/CSS/JS JQuery Python Flask - Coming Soon!</p>
+               
+               
+    
+            </div>
+    
+        </div>
+    
+        <div id="Contact_Me_Mobile" class="relative hidden mx-auto cursor-pointer rounded-md w-5/6 h-24 bg-white text-4xl text-sky-950 mb-4 flex justify-center items-center">
+            <h1>Contact Me</h1>
+        </div>
+        <div id="Contact_Me_content_Mobile" class="relative w-full rounded-md hidden content">
+            <div id="content-content" class="h-full w-full rounded-md flex flex-col items-center text-white">
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">If you'd like to reach out, I would be happy to hear from you! Please find my details below!</p>
+                <p class="m-4 text-2xl bg-sky-950 p-2 rounded-md border-2 opacity-90 text-center">Email : andrewjamescollins@gmail.com</p>
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Mobile : 07523145039</p>
+                <div class="flex">
+                <p class="cursor-pointer m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center hover:bg-white hover:text-sky-950">LinkedIn <i class="fas fa-download animate-bounce"></i></p>
+                <p class="cursor-pointer m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center hover:bg-white hover:text-sky-950">GitHub <i class="fas fa-download animate-bounce"></i></p>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        
+    
+    
+    
+        
+     
+    </div>
+
+    <div id="back-panel" class="stars w-screen h-screen fixed lg:hidden">
+        <video class="full-cover-video w-full h-full" autoplay muted loop>
+            <source src="{{ url_for('static', filename='starynight.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+    
+
+<div id="laptop-section" class="hidden lg:flex h-screen w-screen overflow-x-hidden z-10 aboslute">
+
+    <!--Laptop / Computer Section-->
+    <div id="left-panel" class="h-full w-1/4 flex flex-col items-center">
+        <div id="Buffer" class="h-1/6 w-1/2"></div>
+        <div id="panel" class="w-full h-4/6">
+            <div id="About_Me" class="cursor-pointer rounded-md hidden w-full h-1/4 hover:bg-white text-6xl text-white hover:text-sky-950 flex justify-center items-center">
+                <h1>About Me</h1>
+            </div>
+            <div id="CV" class="cursor-pointer rounded-md hidden w-full h-1/4 hover:bg-white text-6xl text-white hover:text-sky-950 flex justify-center items-center">
+                <h1>CV</h1>
+            </div>
+            <div id="Portfolio" class="cursor-pointer rounded-md hidden w-full h-1/4 hover:bg-white text-6xl text-white hover:text-sky-950 flex justify-center items-center">
+                <h1>Portfolio</h1>
+            </div>
+            <div id="Contact_Me" class="cursor-pointer rounded-md hidden w-full h-1/4 hover:bg-white text-6xl text-white hover:text-sky-950 flex justify-center items-center">
+                <h1>Contact Me</h1> <!--hidden w-full h-1/4 hover:bg-white text-6xl text-white hover:text-sky-950 flex justify-center items-center-->
+        </div>
+        </div>
+    </div>
+    <div id="right-panel" class="h-full w-3/4 flex flex-col items-center ">
+        <div id="Buffer" class="h-1/6 w-1/2"></div>
+        <div id="About_Me_content" class="h-4/6 w-5/6 rounded-md hidden content">
+            <div id="content-content" class="h-full w-full rounded-md flex flex-col items-center text-white">
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Hi there!</p>
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">My name is Andrew Collins, a fresh Computer Science MSc grad and an aspiring developer. I really enjoy being able to write abstract lines of code and turn them into tangible, user-friendly solutions.  My journey has taken me through a plethora of different jobs, and right now, I’m working as a Learning Support Assistant at a local school. <br>
+                    I have a strong work ethic, juggling full-time work with both the final year of my undergrad and my master's. Now, I'm looking to find my first role in the tech sector. I’ve worked with a variety of technologies including HTML, CSS, JavaScript, Python, SQL and PHP and I’m excited to get started learning how to create things professionally.
+                    .</p>
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Feel free to look through my projects on my portfolio to see what I'm up to!</p>
+
+            </div>
+
+        </div>
+        <div id="CV_content" class="h-4/6 w-5/6 rounded-md hidden content">
+            <div id="content-content" class="h-full w-full rounded-md flex flex-col items-center text-white">
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Please download my CV by clicking the button below!</p>
+                <a href="{{ url_for('static', filename='Andrew_Collins_CV.pdf') }}" download>
+                <div class="text-9xl bg-sky-950 p-10 rounded-full border-2 opacity-90 mt-10 hover:bg-white hover:text-sky-950 cursor-pointer">
+                    <i class="fas fa-download animate-bounce"></i>
+            </div></a>
+
+            </div>
+
+        </div>
+        <div id="Portfolio_content" class="h-4/6 w-5/6 rounded-md hidden content">
+            <div id="content-content" class="h-full w-full rounded-md flex flex-col items-center text-white">
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">I hope to keep adding to these as time goes on.</p>
+                <p class="cursor-pointer hover:bg-white hover:text-sky-950 m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center w-full">Allergen Recipe Scraper - Tech Stack : HTML/CSS/JS JQuery Python Flask.</p>
+                <p class="cursor-pointer hover:bg-white hover:text-sky-950 m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center w-full">Simple Blog System - Tech Stack: HTML/CSS/JS JQuery PHP - Coming Soon!</p>
+                <p class="cursor-pointer hover:bg-white hover:text-sky-950 m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center w-full">Book Store Inventory - Tech Stack HTML/CSS/JS Java Spark - Coming Soon!</p>
+                <p class="cursor-pointer hover:bg-white hover:text-sky-950 m-4 text-2xl bg-sky-950 py-4 rounded-md border-2 opacity-90 text-center w-full">Weather Dashboard - Tech Stack : HTML/CSS/JS JQuery Python Flask - Coming Soon!</p>
+               
+               
+
+            </div>
+
+        </div>
+        <div id="Contact_Me_content" class="h-4/6 w-5/6 rounded-md hidden content">
+            <div id="content-content" class="h-full w-full rounded-md flex flex-col items-center text-white">
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">If you'd like to reach out, I would be happy to hear from you! Please find my details below!</p>
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Email : andrewjamescollins@gmail.com</p>
+                <p class="m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center">Mobile : 07523145039</p>
+                <div class="flex">
+                <p class="cursor-pointer m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center hover:bg-white hover:text-sky-950">LinkedIn <i class="fas fa-download animate-bounce"></i></p>
+                <p class="cursor-pointer m-4 text-2xl bg-sky-950 p-4 rounded-md border-2 opacity-90 text-center hover:bg-white hover:text-sky-950">GitHub <i class="fas fa-download animate-bounce"></i></p>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="back-panel" class="stars w-screen h-screen fixed hidden -z-10 lg:block">
+            <video class="full-cover-video w-full h-full" autoplay muted loop>
+                <source src="{{ url_for('static', filename='starynight.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    
+    
+</div>
+</body>
+</html>
+
+
+<script>
+$.fn.simpleFadeIn = function(duration, callback) {
+    return this.each(function() {
+    const $element = $(this);
+    
+    // Capture the original display style in case we want to revert back to it
+    const originalDisplay = $element.css('display');
+    
+    // Set the element to be transparent but occupying space
+    $element.css({
+      'opacity': 0,
+      'display': 'flex',
+    });
+    
+    // Use jQuery's animate function to gradually change the opacity
+    $element.animate({
+    
+      'opacity': 1
+    }, duration, function() {
+      // Callback function after animation completes
+      if (callback) callback.call(this);
+    });
+    });
+    };
+    
+    /* Mobile JS */
+    $(document).ready(function(){
+    const videoElement = document.querySelector('.full-cover-video');
+
+    if(videoElement.readyState === 4) {  // If video is already loaded
+        runAnimations();
+    } else {
+        videoElement.addEventListener('canplaythrough', function() {
+            runAnimations();
+        }, false);
+    }
+
+    function runAnimations() {
+        const AboutMe = $('#About_Me_Mobile');
+        const CV = $('#CV_Mobile');
+        const Portfolio = $('#Portfolio_Mobile');
+        const ContactMe = $('#Contact_Me_Mobile');
+
+        AboutMe.delay(1000).simpleFadeIn(500, function(){
+            CV.simpleFadeIn(500, function(){
+                Portfolio.simpleFadeIn(500, function(){
+                    ContactMe.simpleFadeIn(500);
+                });
+            });
+        });
+    }
+});
+
+    
+    var A = 0;
+    var CV = 0;
+    var P = 0;
+    var CM = 0;
+    $(document).ready(function(){
+    const button = $('#About_Me_Mobile');
+    const content1 = $('#About_Me_content_Mobile');
+    const content2 = $('#CV_content_Mobile');
+    const content3 = $('#Portfolio_content_Mobile');
+    const content4 = $('#Contact_Me_content_Mobile'); 
+    button.click(function(){
+        content2.fadeOut("slow");
+        content3.fadeOut("slow");
+        content4.fadeOut("slow");
+        if (A == 0) {
+            content1.delay(700).fadeIn("slow");
+            A = 1;
+    
+        }
+        else {
+        content1.delay(700).fadeOut("slow");
+        A=0;
+        }
+    });
+    
+    });
+    
+    $(document).ready(function(){
+    const button = $('#CV_Mobile');
+    const content1 = $('#About_Me_content_Mobile');
+    const content2 = $('#CV_content_Mobile');
+    const content3 = $('#Portfolio_content_Mobile');
+    const content4 = $('#Contact_Me_content_Mobile');  
+    button.click(function(){
+        content1.fadeOut("slow");
+        content3.fadeOut("slow");
+        content4.fadeOut("slow");
+        if (CV == 0) {
+            content2.delay(700).fadeIn("slow");
+            CV = 1;
+    
+        }
+        else {
+        content2.delay(700).fadeOut("slow");
+        CV=0;
+        }
+    });
+    
+    });
+    $(document).ready(function(){
+    const button = $('#Portfolio_Mobile');
+    const content1 = $('#About_Me_content_Mobile');
+    const content2 = $('#CV_content_Mobile');
+    const content3 = $('#Portfolio_content_Mobile');
+    const content4 = $('#Contact_Me_content_Mobile'); 
+    button.click(function(){
+        content1.fadeOut("slow");
+        content2.fadeOut("slow");
+        content4.fadeOut("slow");
+        if (P == 0) {
+            content3.delay(700).fadeIn("slow");
+            P = 1;
+    
+        }
+        else {
+        content3.delay(700).fadeOut("slow");
+        P=0;
+        }
+    });
+    
+    });
+    $(document).ready(function(){
+    const button = $('#Contact_Me_Mobile');
+    const content1 = $('#About_Me_content_Mobile');
+    const content2 = $('#CV_content_Mobile');
+    const content3 = $('#Portfolio_content_Mobile');
+    const content4 = $('#Contact_Me_content_Mobile'); 
+    button.click(function(){
+        content1.fadeOut("slow");
+        content2.fadeOut("slow");
+        content3.fadeOut("slow");
+        if (CM == 0) {
+            content4.delay(700).fadeIn("slow");
+            CM = 1;
+    
+        }
+        else {
+        content4.delay(700).fadeOut("slow");
+        CM=0;
+        }
+    });
+    });
+/*Laptop JS */
+$(document).ready(function(){
+    const videoElement = document.querySelector('.full-cover-video');
+
+    function runLaptopAnimations() {
+        const AboutMe = $('#About_Me');
+        const CV = $('#CV');
+        const Portfolio = $('#Portfolio');
+        const ContactMe = $('#Contact_Me');
+
+        AboutMe.delay(700).simpleFadeIn(500, function(){
+            CV.simpleFadeIn(500, function(){
+                Portfolio.simpleFadeIn(500, function(){
+                    ContactMe.simpleFadeIn(500);
+                });
+            });
+        });
+    }
+
+    if(videoElement.readyState === 4) {  // If video is already loaded
+        runLaptopAnimations();
+    } else {
+        videoElement.addEventListener('canplaythrough', function() {
+            runLaptopAnimations();
+        }, false);
+    }
+});
+
+
+var A_L = 0;
+var CV_L = 0;
+var P_L = 0;
+var CM_L = 0;
+
+
+$(document).ready(function(){
+    const buttonAboutMe = $('#About_Me');
+    const contentAboutMe = $('#About_Me_content');
+    const contentCV = $('#CV_content');
+    const contentPortfolio = $('#Portfolio_content');
+    const contentContactMe = $('#Contact_Me_content'); 
+
+    buttonAboutMe.click(function(){
+        contentCV.fadeOut("slow");
+        contentPortfolio.fadeOut("slow");
+        contentContactMe.fadeOut("slow");
+        if (A_L == 0) {
+            contentAboutMe.delay(700).fadeIn("slow");
+            A_L = 1;
+            CV_L = 0;
+            P_L = 0;
+            CM_L = 0;
+        }
+        else {
+            contentAboutMe.delay(700).fadeOut("slow");
+            A_L=0;
+        }
+    });
+
+    const buttonCV = $('#CV');
+    buttonCV.click(function(){
+        contentAboutMe.fadeOut("slow");
+        contentPortfolio.fadeOut("slow");
+        contentContactMe.fadeOut("slow");
+        if (CV_L == 0) {
+            contentCV.delay(700).fadeIn("slow");
+            CV_L = 1;
+            A_L = 0;
+            P_L = 0;
+            CM_L = 0;
+        }
+        else {
+            contentCV.delay(700).fadeOut("slow");
+            CV_L=0;
+        }
+    });
+
+    const buttonPortfolio = $('#Portfolio');
+    buttonPortfolio.click(function(){
+        contentAboutMe.fadeOut("slow");
+        contentCV.fadeOut("slow");
+        contentContactMe.fadeOut("slow");
+        if (P_L == 0) {
+            contentPortfolio.delay(700).fadeIn("slow");
+            P_L = 1;
+            A_L = 0;
+            CV_L = 0;
+            CM_L = 0;
+        }
+        else {
+            contentPortfolio.delay(700).fadeOut("slow");
+            P_L=0;
+        }
+    });
+
+    const buttonContactMe = $('#Contact_Me');
+    buttonContactMe.click(function(){
+        contentAboutMe.fadeOut("slow");
+        contentCV.fadeOut("slow");
+        contentPortfolio.fadeOut("slow");
+        if (CM_L == 0) {
+            contentContactMe.delay(700).fadeIn("slow");
+            CM_L = 1;
+            A_L = 0;
+            P_L = 0;
+            CM_L = 0;
+        }
+        else {
+            contentContactMe.delay(700).fadeOut("slow");
+            CM_L=0;
+        }
+    });
+});
+
+
+</script>
